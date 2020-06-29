@@ -1,0 +1,47 @@
+//Commands line in the bash to download ROS program .
+
+
+
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+
+sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+
+curl -sSL 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xC1CF6E31E6BADE8868B172B4F42ED6FBAB17C654' | sudo apt-key add -
+
+sudo apt update
+
+sudo apt install ros-noetic-desktop-full
+
+sudo apt install vim 
+
+ahmad@ahmad-VirtualBox:~$ cd /opt
+ahmad@ahmad-VirtualBox:/opt$ cd ros
+ahmad@ahmad-VirtualBox:/opt/ros$ cd noetic
+ahmad@ahmad-VirtualBox:/opt/ros/noetic$ source setup.bash
+ahmad@ahmad-VirtualBox:/opt/ros/noetic$ roscore
+... logging to /home/ahmad/.ros/log/69e95e9c-ba15-11ea-bc74-5bc1b690dee6/roslaunch-ahmad-VirtualBox-3418.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+started roslaunch server http://ahmad-VirtualBox:44543/
+ros_comm version 1.15.7
+
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: noetic
+ * /rosversion: 1.15.7
+
+NODES
+
+auto-starting new master
+process[master]: started with pid [3441]
+ROS_MASTER_URI=http://ahmad-VirtualBox:11311/
+
+setting /run_id to 69e95e9c-ba15-11ea-bc74-5bc1b690dee6
+process[rosout-1]: started with pid [3451]
+started core service [/rosout]
+
